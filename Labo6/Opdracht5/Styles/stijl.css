@@ -4,3 +4,23 @@ a {
     background-size: 1em 1em;
     padding-left: 1em;
 }
+
+.size12 {
+    font-size: 12px;
+}
+
+.size16 {
+    font-size: 16px;
+}
+
+.size20 {
+    font-size: 20px;
+}
+
+.size24 {
+    font-size: 24px;
+}
+
+.size28 {
+    font-size: 28px;
+}
