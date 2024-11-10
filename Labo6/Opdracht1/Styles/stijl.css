@@ -1,6 +1,6 @@
 .menuitem {
     display:inline-block;
-    width:150px;
+    width: 10em;
 }
 .menuitem > a {
     color:red;
@@ -8,7 +8,7 @@
 
 .menu > li {
     display:inline-block;
-    width:150px;
+    width: 10em;
 }
 
 .menu > li > a {
