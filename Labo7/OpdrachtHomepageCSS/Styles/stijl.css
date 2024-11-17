@@ -84,7 +84,7 @@ table thead th {
     /* Vraag 2 prefixes */
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8C8C8C), color-stop(1, #7D7D7D) );
     background:-moz-linear-gradient( center top, #8C8C8C 5%, #7D7D7D 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C8C8C', endColorstr='#7D7D7D'); /
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C8C8C', endColorstr='#7D7D7D');
     background-color: #8C8C8C;
     color:#FFFFFF;
     font-size: 12px;
