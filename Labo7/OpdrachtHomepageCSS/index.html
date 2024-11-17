@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="Styles/stijl.css">
+</head>
+
+<body>
+<header>
+    <h1 class="header-title">Aaron Van Daele</h1>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#persoonlijke-info">Persoonlijke Informatie</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#likes">Likes</a></li>
+            <li><a href="#vrienden">Vrienden</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="persoonlijke-info">
+    <h2>Persoonlijke Informatie</h2>
+    <address>
+        <p>Naam: Aaron Van Daele</p>
+        <p>Adres: Vossenplein 14, 1000 Brussel</p>
+        <p>Telefoonnummer: +32 26488746</p>
+        <p>E-mail: <a href="mailto:aaron.vandaele@student.vives.be">aaron.vandaele@student.vives.be</a></p>
+    </address>
+    <figure>
+        <img src="Images/MijnFoto.jpg" alt="Jouw Foto">
+        <figcaption>Mijn Foto</figcaption>
+    </figure>
+</section>
+
+<section id="hobbies">
+    <h2>Hobbies</h2>
+    <h3>Hobby 1: Gaming</h3>
+    <p>Mijn passie is gamen. Ik speel verschillende soorten games. Mijn favoriete gamegenres zijn RPG's en shooters.</p>
+    <a href="https://nl.ign.com/">Ign</a>
+
+    <h3>Hobby 2: Computers builden</h3>
+    <p>Het is fascinerend om hardwarecomponenten te selecteren en ze samen te voegen om krachtige systemen te creëren.</p>
+    <a href="https://tweakers.net/">Tweakers</a>
+
+    <h3>Hobby 3: Netwerkbeheer</h3>
+    <p>Ik heb een grote interesse in netwerkbeheer en IT-infrastructuur.</p>
+    <a href="https://www.zyxel.com/">Zyxel</a>
+</section>
+
+<section id="likes">
+    <h2>Likes</h2>
+    <ul>
+        <li>
+            <h3>Favoriete band: The Beatles</h3>
+            <img src="Images/Beatles.jpg" alt="The Beatles">
+            <p><a href="https://www.thebeatles.com/">Website Beatles</a></p>
+        </li>
+        <li>
+            <h3>Favoriete Film: The Godfather</h3>
+            <img src="Images/Godfather.jpg" alt="The Godfather">
+            <p><a href="https://en.wikipedia.org/wiki/The_Godfather">Website The Godfather</a></p>
+        </li>
+        <li>
+            <h3>Favoriete muziek: Smooth jazz</h3>
+            <img src="Images/SmoothJazz.jpg" alt="Smooth Jazz">
+            <p><a href="https://en.wikipedia.org/wiki/Smooth_jazz">Website Smooth Jazz</a></p>
+        </li>
+    </ul>
+</section>
+
+
+<section id="vrienden" >
+    <h2>vrienden</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Voornaam</th>
+            <th>Familienaam</th>
+            <th>Postcode</th>
+            <th>Email</th>
+            <th>Telefoonnummer</th>
+            <th>Leeftijd</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>Imaginaire1</td>
+            <td>Vriend1</td>
+            <td>1234 AB</td>
+            <td>imaginaire1@example.com</td>
+            <td class="onbekend">Onbekend</td>
+            <td>25</td>
+        </tr>
+        <tr class="alt">
+            <td>Imaginaire2</td>
+            <td>Vriend2</td>
+            <td class="onbekend">Onbekend</td>
+            <td>imaginaire2@example.com</td>
+            <td>987-654-321</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Imaginaire3</td>
+            <td class="onbekend">Onbekend</td>
+            <td>9012 EF</td>
+            <td>imaginaire3@example.com</td>
+            <td>555-555-555</td>
+            <td>22</td>
+        </tr>
+        <tr class="alt">
+            <td>Imaginaire4</td>
+            <td>Vriend4</td>
+            <td>3456 GH</td>
+            <td>imaginaire4@example.com</td>
+            <td>111-222-333</td>
+            <td class="onbekend">Onbekend</td>
+        </tr>
+        <tr>
+            <td>Imaginaire5</td>
+            <td>Vriend5</td>
+            <td>7890 IJ</td>
+            <td class="onbekend">Onbekend</td>
+            <td>444-555-666</td>
+            <td>35</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>Vraag 1: Zijn alle properties die de generator voorziet werkelijk nodig?</h3>
+    <p> <b>Antwoord:</b> Niet alle properties zijn noodzakelijk, ze kunnen wel stijlkenmerken toevoegen aan de tabel. vb: border-radius, text-align, en font helpen bij de visuele weergave en ontwerp van de tabel. Prefixes zijn ook niet meer nodig bij moderne browsers. </p>
+
+    <h3>Vraag 2: De generator gebruikt voor bepaalde properties een browser prefix. Zijn die voor jouw browser (nog steeds) nodig?</h3>
+    <p><b>Antwoord:</b>Het gebruik van browser prefixes, zoals -webkit- en -moz-, is afhankelijk van de gewenste browserondersteuning. Moderne  (Chrome) tonen de eigenschappen correct zonder prefixes. Voor oudere browsers kan in de meeste gevallen tools zoals autoprefixer gebruiken.</p>
+
+    <h3>Vraag 3: Waarom heeft de volgende CSS regel: .onbekend {background-color:red;} geen effect toepast op een cel in een rij met class="alt" rij zonder deze 'alt' class?</h3>
+     <p><b>Antwoord:</b>De CSS-regel mist specificiteit om de achtergrondkleur in de 'alt'-rijen te overschrijven; dit wordt verholpen door specifieke selectie zoals : table tbody .alt .onbekend </p>
+</section>
+
+<footer>
+    <p>Aaron Van Daele</p>
+</footer>
+</body>
+</html>
