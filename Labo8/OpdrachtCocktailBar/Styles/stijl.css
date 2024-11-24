@@ -1,0 +1,92 @@
+body {
+    margin: 0 auto;
+    padding:0;
+    width: 95%;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+section {
+    width: 70%;
+    float: left;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+}
+
+header p {
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #007e7e;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 130%;
+}
+
+a {
+    color: black;
+}
+
+#weekly {
+    border: 1px solid #007e7e;
+    float: right;
+    box-sizing: border-box;
+    width: 30%;
+    padding: 2%;
+    text-align: center;
+    background-image: url("../images/cocktail.gif");
+    background-repeat: repeat-x;
+    line-height: 1;
+}
+
+.weekly h1 {
+    color: magenta;
+}
+
+.weekly h2 {
+    color: coral;
+}
+
+.weekly a:hover {
+    background-color: sandybrown;
+}
+
+footer {
+    font-size: 50%;
+    clear: both;
+    text-align: center;
+}
+
+#guarantee {
+    margin: 30px;
+    padding: 20px 20px 20px 80px;
+    color: #444444;
+    background-color: #a7cece;
+    border: 2px dotted white;
+    font-style: italic;
+    background-image: url("../images/background.gif");
+    background-repeat: no-repeat;
+}
+
+#guarantee a {
+    color: #444444;
+}
+
+.buddha {
+    font-style: italic;
+}
+
+.claude {
+    font-weight: bold;
+}
