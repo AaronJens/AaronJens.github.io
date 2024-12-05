@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+}
+
+nav {
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0077cc;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px 0;
+}
+
+section:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+h2 {
+    color: #333;
+    font-size: 2.5em;
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.5;
+}
+
+ul {
+    display: inline-block;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+}
+
+h3 {
+    padding-top: 1em;
+}
+
+
+@media (max-width: 767px) {
+    section {
+        padding: 10px 0;
+    }
+
+    #persoonlijke-info address,
+    #persoonlijke-info figure,
+    #hobbies h3,
+    #hobbies p,
+    #hobbies a,
+    #likes ul li {
+        width: 100%;
+        margin-bottom: 20px;
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    #likes ul li,
+    #persoonlijke-info address,
+    #persoonlijke-info figure,
+    #hobbies h3,
+    #hobbies p,
+    #hobbies a {
+        width: 100%;
+        margin-bottom: 20px;
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    section {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    section div {
+        width: 30%;
+        margin: 0 1.5%;
+    }
+
+    #likes ul li,
+    #hobbies h3,
+    #hobbies p,
+    #hobbies a {
+        width: 30%;
+        margin: 0 1.5%;
+        display: inline-block;
+    }
+
+    #persoonlijke-info address,
+    #persoonlijke-info figure {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
