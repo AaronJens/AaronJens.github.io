@@ -10,7 +10,7 @@
     padding:20px;
     background-color: white;
 }
-
+/* Aaron van Daele*/
 @media screen and (min-width: 700px) {
     .container {
         grid-template-columns: repeat(5, auto);

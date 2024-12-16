@@ -4,7 +4,7 @@
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(3, auto);
 }
-
+/* Aaron van Daele*/
 .container .block{
     margin:50px;
     padding:50px;
