@@ -12,10 +12,10 @@ const update = () => {
     let total = 0;
 
     for (let i=0; i < subtotal_elements.length; ++i) {
-        let without_btw = parseFloat(prijs_elements[i].textContent) * waarde_elements[i].value ;
-        let with_btw = without_btw + without_btw * parseFloat(btw_elements[i].textContent) / 100;
-        subtotal_elements[i].textContent = with_btw.toFixed(2) + " Eur";
-        total += with_btw;
+        let zonder_btw = parseFloat(prijs_elements[i].textContent) * waarde_elements[i].value ;
+        let met_btw = zonder_btw + zonder_btw * parseFloat(btw_elements[i].textContent) / 100;
+        subtotal_elements[i].textContent = met_btw.toFixed(2) + " Eur";
+        total += met_btw;
     }
 
     total_element.innerText = total.toFixed(2) + " Eur";
