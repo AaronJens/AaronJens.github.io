@@ -2,8 +2,8 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Producten</title>
     <link rel="stylesheet" href="styles/style.css">
+    <title>Opdracht Producten</title>
 </head>
 <body>
 <h1>Producten</h1>
@@ -19,33 +19,35 @@
     </thead>
     <tbody>
     <tr>
-        <td>product1</td>
-        <td class="bedrag prijs">10.00 Eur</td>
-        <td><input type="number" class="aantal" value="0"></td>
-        <td class="btw">6&percnt;</td>
-        <td class="bedrag subtotaal">0.00 Eur</td>
+        <td>Product 1</td>
+        <td class="prijs">10.00 Eur</td>
+        <td><input class="aantal" type="number" value="0" min="0" aria-label=""></td>
+        <td class="btw">6%</td>
+        <td class="subtotaal">0 Eur</td>
     </tr>
     <tr>
-        <td>product2</td>
-        <td class="bedrag prijs">15.00 Eur</td>
-        <td><input type="number" class="aantal" value="0"></td>
-        <td class="btw">21&percnt;</td>
-        <td class="bedrag subtotaal">0.00 Eur</td>
+        <td>Product 2</td>
+        <td class="prijs">15.00 Eur</td>
+        <td><input class="aantal" type="number" value="0" min="0" aria-label=""></td>
+        <td class="btw">21%</td>
+        <td class="subtotaal">0 Eur</td>
     </tr>
     <tr>
-        <td>product3</td>
-        <td class="bedrag prijs">12.20 Eur</td>
-        <td><input type="number" class="aantal" value="0"></td>
-        <td class="btw">21&percnt;</td>
-        <td class="bedrag subtotaal">0.00 Eur</td>
-    </tr>
-    <tr>
-        <td colspan="4">totaal</td>
-        <td colspan="1" id="totaal">0.00 Eur</td>
+        <td>Product 3</td>
+        <td class="prijs">12.20 Eur</td>
+        <td><input class="aantal" type="number" value="0" min="0" aria-label=""></td>
+        <td class="btw">21%</td>
+        <td class="subtotaal">0 Eur</td>
     </tr>
     </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4">Totaal</td>
+        <td id="totaal">0.00 Eur</td>
+    </tr>
+    </tfoot>
 </table>
-<input id="bereken" type="button" value="Herbereken">
-<script src="scripts/code.js"></script>
+<button id="herbereken">Herbereken</button>
+<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
 </body>
 </html>

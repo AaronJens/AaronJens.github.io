@@ -1,28 +1,24 @@
 const setup = () => {
-    let bereken = document.getElementById("bereken");
-    bereken.addEventListener("click", herbereken);
+    document.getElementById("herbereken").addEventListener("click", update);
 }
 
-const herbereken = () => {
-    let prijzen = document.getElementsByClassName("prijs");
-    let aantallen = document.getElementsByClassName("aantal");
-    let btwwaarden = document.getElementsByClassName("btw");
-    let subtotalen = document.getElementsByClassName("subtotaal");
-    let totaal = document.getElementById("totaal");
+const update = () => {
+    let prijs_elements = document.getElementsByClassName("prijs");
+    let waarde_elements = document.getElementsByClassName("aantal");
+    let btw_elements = document.getElementsByClassName("btw");
+    let subtotal_elements = document.getElementsByClassName("subtotaal");
+    let total_element = document.getElementById("totaal");
 
-    let tussentotaal = 0;
-    for (let i = 0; i < prijzen.length; i++) {
-        let prijs = parseInt(prijzen[i].innerHTML);
-        let aantal = parseInt(aantallen[i].value);
-        let btw = parseInt(btwwaarden[i].innerHTML);
+    let total = 0;
 
-        let uitkomst = (prijs * aantal) + ((prijs * aantal) * (btw / 100));
-        subtotalen[i].innerHTML = uitkomst.toFixed(2) + " Eur";
-
-        tussentotaal += uitkomst;
-        totaal.innerHTML = tussentotaal + " Eur";
-
+    for (let i=0; i < subtotal_elements.length; ++i) {
+        let without_btw = parseFloat(prijs_elements[i].textContent) * waarde_elements[i].value ;
+        let with_btw = without_btw + without_btw * parseFloat(btw_elements[i].textContent) / 100;
+        subtotal_elements[i].textContent = with_btw.toFixed(2) + " Eur";
+        total += with_btw;
     }
+
+    total_element.innerText = total.toFixed(2) + " Eur";
 }
 
 window.addEventListener("load", setup);
