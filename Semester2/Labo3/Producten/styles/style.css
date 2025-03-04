@@ -1,0 +1,10 @@
+body{
+    width: 960px;
+    margin: 0 auto;
+}
+
+table, table th, table td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 3px;
+}

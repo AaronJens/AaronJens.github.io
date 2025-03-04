@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 4px solid gray;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#sliders {
+    width: 300px;
+    text-align: left;
+}
+
+.slider-container {
+    gap: 5px;
+}
+
+#blokje, .colorDemo {
+    width: 100px;
+}
+
+.colorDemo {
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 5px;
+}

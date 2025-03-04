@@ -10,4 +10,4 @@ const toggleList = () => {
 let button = document.getElementById('toggleButton');
 let list = document.getElementById('myList');
 
-window.addEventListener("load", setup);
+window.addEventListener("load", setup);w 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Opdracht 2 - Vragen</title>
+</head>
+<body>
+<h1>Opdracht 2 vragen</h1>
+<section>
+    <p>Bestudeer de code van de demonstratie op het Sources tabblad in de Chrome Developer Tools.</p>
+
+    <p class="vraag"> Waar wordt de event listener gekoppeld aan de slider?</p>
+    <p class="code">sliders[0].addEventListener("change", update);  <br>sliders[0].addEventListener("input", update);</p>
+
+    <p class="vraag">Waarom moeten we die op twee soorten events koppelen?</p>
+    <p class="code">sliders[0].addEventListener("change", update);</p>
+    <p>Indien ik enkel het change-event gebruik, krijg ik enkel de definitieve waarde. (De waarde bij het releasen van
+        de slider).</p>
+
+    <p class="code">sliders[0].addEventListener("input", update);</p>
+    <p>Indien ik enkel het input-event gebruik, krijg ik de waarden wanneer de slider in actie is</p>
+    <img src="images/waarden.png" alt="waarden">
+    <p class="vraag">In de CSS file wordt nergens een rode kleur opgegeven, waar wordt dan wel de rode kleur van het
+        blokje ingesteld?</p>
+    <p>In de JavaScript file:</p>
+    <p class="code">colorDemos[0].style.backgroundColor = "red";</p>
+    <p class="vraag">Waarom schrijven we telkens sliders[0] en colorDemos[0] en niet gewoon sliders of colorDemos?</p>
+    <p>Omdat het collecties zijn.</p>
+    <p class="vraag">Waar vind je de CSS-properties die programmatorisch werden ingesteld, zoals bv. de rode
+        achtergrondkleur van het blokje?</p>
+    <img src="images/ElementRood.png" alt="Red">
+</section>
+
+<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
+<footer>Aaron van Daele</footer>
+</body>
+</html>

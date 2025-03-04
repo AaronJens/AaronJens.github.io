@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Producten</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<h1>Producten</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Producten</th>
+        <th>Prijs</th>
+        <th>Aantal</th>
+        <th>Btw</th>
+        <th>Subtotaal</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>product1</td>
+        <td class="bedrag prijs">10.00 Eur</td>
+        <td><input type="number" class="aantal" value="0"></td>
+        <td class="btw">6&percnt;</td>
+        <td class="bedrag subtotaal">0.00 Eur</td>
+    </tr>
+    <tr>
+        <td>product2</td>
+        <td class="bedrag prijs">15.00 Eur</td>
+        <td><input type="number" class="aantal" value="0"></td>
+        <td class="btw">21&percnt;</td>
+        <td class="bedrag subtotaal">0.00 Eur</td>
+    </tr>
+    <tr>
+        <td>product3</td>
+        <td class="bedrag prijs">12.20 Eur</td>
+        <td><input type="number" class="aantal" value="0"></td>
+        <td class="btw">21&percnt;</td>
+        <td class="bedrag subtotaal">0.00 Eur</td>
+    </tr>
+    <tr>
+        <td colspan="4">totaal</td>
+        <td colspan="1" id="totaal">0.00 Eur</td>
+    </tr>
+    </tbody>
+</table>
+<input id="bereken" type="button" value="Herbereken">
+<script src="scripts/code.js"></script>
+</body>
+</html>
