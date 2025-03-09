@@ -1,0 +1,35 @@
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input {
+    margin-bottom: 5px;
+}
+.opties {
+    display: flex;
+    padding-bottom: 3px;
+}
+
+.extra div {
+    padding-bottom: 8px;
+}
+#bericht {
+    display: flex;
+    justify-content: center;
+}
+#container {
+    width: 250px;
+    height: 100px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+#container p {
+    text-align: center;
+}

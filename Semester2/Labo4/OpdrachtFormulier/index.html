@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Opdracht Formulier</title>
+</head>
+<body>
+<form method="post" action="./formulierElementen.html">
+    <h1>Formulier</h1>
+
+    <label for="txtFirstname">First name*: </label>
+    <input type="text" id="txtFirstname" placeholder="Your first name" autofocus="autofocus" required><br>
+
+    <label for="txtLastname">Last name*: </label>
+    <input type="text" id="txtLastname" placeholder="Your last name" required><br>
+
+
+    Which sport do you train?<br>
+    <label for="cbkRunning">Running</label>
+    <input type="checkbox" name="cbkRunning" id="cbkRunning" value="r"><br>
+    <label for="cbkSwimming">Swimming</label>
+    <input type="checkbox" name="cbkSwimming" id="cbkSwimming" value="s"><br>
+    <label for="cbkRowing">Rowing</label>
+    <input type="checkbox" name="cbkRowing" id="cbkRowing" value="o"><br>
+
+
+    What is your gender?: <br>
+    <input type="radio" name="gender" id="rdbMale" value="m">
+    <label for="rdbMale">Male</label><br>
+    <input type="radio" name="gender" id="rdbFemale" value="f">
+    <label for="rdbFemale">Male</label><br>
+
+    <label for="txtFavoriteMovie">Favorite movie: </label>
+    <input type="text" id="txtFavoriteMovie"><br>
+
+    <label for="txtQuote">Favorite quote: </label>
+    <input type="text" id="txtQuote" placeholder="Write your favorite quote"><br>
+
+    <label for="txtPassword">Password*:</label>
+    <input type="password" id="txtPassword" required><br>
+
+    <div class="opties">
+        <label for="optionfood">Favorite food:</label>
+        <select id="optionfood" name="food" size="3" multiple>
+            <option value="1">Hamburger</option>
+            <option value="2">Hot dog</option>
+            <option value="3">pizza</option>
+        </select>
+    </div>
+
+    <input type="file" id="txtFile" name="filename"><br>
+
+
+    <label for="txtEmail">Email address:</label>
+    <input type="email" id="txtEmail" placeholder="Enter your email address"><br>
+
+    <label for="txtUrl">Favorite site:</label>
+    <input type="url" id="txtUrl" placeholder="Enter the URL of your favorite site"><br>
+
+    <label for="txtNumber">Favorite number between 1-10: </label>
+    <input type="number" name="number" id="txtNumber" min="1" max="10"><br>
+
+    <label for="range">Favorite number between 11-1000: </label>
+    <input type="range" name="range" id="range" class="range" min="11" max="1000"><span
+        id="resultRange">output</span><br>
+
+    <label for="txtBorn">When were you born? </label>
+    <input type="date" name="born" id="txtBorn" max='2024-03-14'><br>
+
+    <label for="txtPostcode">Belgium zip-code reg number*: </label>
+    <input type="text" id="txtPostcode" pattern="[1-9]{1}[0-9]{3}" placeholder="9999"
+           title="Vul een geldige postcode in (4 cijfers)" required><br>
+
+    <label for="color">What is your favorite color?</label>
+    <input type="color" id="color" class="color" value="#2974d6"> Kleurcode: <span id="kleurHex"></span> <br><!--enkel class gebruikt voor de javascript-->
+
+    <label for="txtSearch">Search for something: </label>
+    <input type="search" id="txtSearch"><br>
+
+
+    <input type="submit" value="Submit" id="verzenden">
+
+
+</form>
+<form class="extra">
+    <h2>waarom is het potentieel een probleem als je GET gebruikt in een situatie waar het POST had moeten zijn?</h2>
+    <p>Als je GET gebruikt waar POST bedoeld is, kan dit leiden tot beveiligingsproblemen omdat de gegevens zichtbaar zijn in de URL,
+        en de hoeveelheid gegevens die je via GET kunt versturen is beperkt, wat problemen kan veroorzaken als er meer data nodig is dan
+        wat de server of browser kan verwerken.
+    </p>
+    <h2>Waarom stop je geen tekst in een label voor een checkbox of radiobutton?</h2>
+    <p>
+        Bij een checkbox of radiobutton voeg je geen tekst toe in het label, omdat de keuze zelf al duidelijk is.
+        Het for attribuut zorgt ervoor dat een klik op het label hetzelfde effect heeft als een klik op de bijbehorende input
+    </p>
+    <h2>Verschil datalist en select:</h2>
+    <div>
+        <h3>Datalist:</h3>
+        <p> Een lijst met data koppelen aan een bepaald invoerveld</p>
+        <p>Je kan in het inputveld typen en een optie toevoegen, select heeft deze functie niet.</p>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+    </div>
+    <div>
+        <h3>Select:</h3>
+        <select>
+            <option value="option1">Optie 1</option>
+            <option value="option2">Optie 2</option>
+            <option value="option3">Optie 3</option>
+        </select>
+    </div>
+
+    <div>
+        Welke programmeertalen kent u ? <span> Met multiple(om meerdere te selecteren)</span>
+        <select name="taal" size="3" multiple>
+            <option value="java">JAVA</option>
+            <option value="delphi">Delphi</option>
+            <option value="c">C#.NET</option>
+            <option value="asp">ASP.NET</option>
+            <option value="vb">VB.NET</option>
+        </select>
+    </div>
+
+</form>
+<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
+<footer>Aaron van Daele</footer>
+</body>
+</html>
