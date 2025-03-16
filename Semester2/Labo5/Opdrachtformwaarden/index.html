@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Opdracht - Formwaarden</title>
+</head>
+<body>
+<form>
+    <label for="cbkRoker">Is een roker</label>
+    <input type="checkbox" id="cbkRoker" name="roker"><br>
+
+    <span>Moedertaal</span>
+    <input type="radio" id="rdbNederlands" name="moedertaal" value="nl">
+    <label for="rdbNederlands">Nederlands</label>
+    <input type="radio" id="rdbFrans" name="moedertaal" value="fr" checked>
+    <label for="rdbFrans">Frans</label>
+    <input type="radio" id="rdbEngels" name="moedertaal" value="en">
+    <label for="rdbEngels">Engels</label><br>
+
+    <label for="optionLand">Favoriete buurland</label>
+    <select id="optionLand" name="buurland">
+        <option value="1">Nederland</option>
+        <option value="2" selected>Frankrijk</option>
+        <option value="3">Duitsland</option>
+    </select><br>
+
+    <div class="opties">
+        <label for="optionBestelling">Bestelling</label>
+        <select id="optionBestelling" name="bestelling" size="6" multiple>
+            <option value="1" selected>aardappelen</option>
+            <option value="2">brood</option>
+            <option value="3" selected>melk</option>
+            <option value="4" selected>biefstuk</option>
+            <option value="5">chips</option>
+            <option value="6">krant</option>
+        </select>
+    </div>
+
+    <input type="button" value="Toon resultaat" id="btnResultaat">
+</form>
+<script src="scripts/code.js"></script>
+<footer>Aaron van Daele</footer>
+</body>
+</html>

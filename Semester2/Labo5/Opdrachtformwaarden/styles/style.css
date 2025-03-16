@@ -1,0 +1,16 @@
+form {
+    margin: 0 auto;
+}
+
+.opties {
+    display: flex;
+    margin-top: 5px;
+}
+
+#optionLand {
+    margin-top: 5px;
+}
+
+#btnResultaat {
+    margin-top: 10px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Opdracht - Formvalidatie</title>
+</head>
+<body>
+<h1>Opdracht - Formvalidatie</h1>
+<form>
+    <div class="line">
+        <label for="txtVoornaam">Voornaam</label>
+        <input type="text" id="txtVoornaam"/>
+        <span class="errorMessage" id="errVoornaam"></span>
+    </div>
+    <div class="line">
+        <label for="txtAchternaam">Familienaam</label>
+        <input type="text" id="txtAchternaam"/>
+        <span class="errorMessage" id="errAchternaam"></span>
+    </div>
+    <div class="line">
+        <label for="txtGeboortedatum">Geboortedatum</label>
+        <input type="text" id="txtGeboortedatum"/>
+        <span class="errorMessage" id="errGeboortedatum"></span>
+    </div>
+    <div class="line">
+        <label for="txtEmail">Email</label>
+        <input type="text" id="txtEmail"/>
+        <span class="errorMessage" id="errEmail"></span>
+    </div>
+    <div class="line">
+        <label for="txtAantalKinderen">Aantal kinderen</label>
+        <input type="text" id="txtAantalKinderen"/>
+        <span class="errorMessage" id="errAantalKinderen"></span>
+    </div>
+    <input type="button" id="btnValideer" value="Valideer"/>
+</form>
+<script src="scripts/code.js"></script>
+<footer>Aaron van Daele</footer>
+</body>
+</html>

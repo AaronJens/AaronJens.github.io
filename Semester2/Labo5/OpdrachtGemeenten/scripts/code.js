@@ -24,4 +24,5 @@ const voegGemeentenToe = (gemeenten) => {
         div.innerHTML = htmlTekst;
     }
 }
+
 window.addEventListener("load", setup);
