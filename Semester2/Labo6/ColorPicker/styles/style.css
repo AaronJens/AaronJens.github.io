@@ -1,0 +1,40 @@
+.component span:nth-of-type(2) {
+    width: 3em;
+    text-align: right;
+}
+
+.swatch, .saveSwatch {
+    display: inline-block;
+    border: solid 1px black;
+    margin: 0 0 0 1em;
+    height: 4em;
+    width: 5em;
+}
+
+.swatch {
+    border-radius: 5px;
+}
+
+.saveSwatch {
+    margin-top: 5px;
+}
+
+.components {
+    display: inline-block;
+    height: 100%;
+}
+
+.colorPicker {
+    display: inline-block;
+    border: solid 5px lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.slider {
+    vertical-align: middle;
+}
+
+.swatch p {
+    background-color: white;
+}
