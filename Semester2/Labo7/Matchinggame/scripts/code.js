@@ -16,6 +16,8 @@ let global = {
 
 let cardRatio = { width: 1, height: 1 };
 let isBusy = false;
+let timerInterval = null;
+let elapsedTime = 0;
 
 const setup = () => {
     addSubjectChooser();
@@ -30,6 +32,7 @@ const setup = () => {
     updateAmount();
     amountOfCards.addEventListener("click", updateAmount);
     amountOfCards.addEventListener("input", updateAmount);
+    updateHighscore();
 };
 
 const updateAmount = () => {
@@ -86,6 +89,7 @@ const play = () => {
         createCards();
         document.getElementById("Game").classList.remove("hidden");
         amountOfCards();
+        startTimer();
     } else {
         alert("No subject chosen");
     }
@@ -172,6 +176,8 @@ const update = () => {
 const checkEnd = () => {
     const found = document.getElementsByClassName("found");
     if (found.length === global.TOTAL_AMOUNT) {
+        stopTimer();
+        updateHighscore();
         endGame();
     }
 };
@@ -205,11 +211,14 @@ const endGame = () => {
 const restart = () => {
     global.tries = 0;
     isBusy = false;
+    stopTimer();
     document.body.style.cursor = "default";
     document.getElementById("triesH").innerText = global.tries;
     document.getElementById("Ending").classList.add("hidden");
     document.getElementById("Beginning").classList.remove("hidden");
     document.getElementById("PlayField").innerHTML = "";
+    document.getElementById("timer").innerText = "0";
+    updateHighscore(); // ✅ herlaadt de bestTime op het scherm
 };
 
 const algorithm = (cards, field) => {
@@ -238,6 +247,28 @@ const algorithm = (cards, field) => {
             card.style.margin = `${margin}px`;
         });
     }
+};
+
+const startTimer = () => {
+    elapsedTime = 0;
+    document.getElementById("timer").innerText = elapsedTime;
+    timerInterval = setInterval(() => {
+        elapsedTime++;
+        document.getElementById("timer").innerText = elapsedTime;
+    }, 1000);
+};
+
+const stopTimer = () => {
+    clearInterval(timerInterval);
+};
+
+const updateHighscore = () => {
+    const prev = localStorage.getItem("bestTime");
+    if (!prev || elapsedTime < parseInt(prev)) {
+        localStorage.setItem("bestTime", elapsedTime);
+    }
+    const best = localStorage.getItem("bestTime");
+    document.getElementById("highscore").innerText = best ?? "--";
 };
 
 window.addEventListener("load", setup);
