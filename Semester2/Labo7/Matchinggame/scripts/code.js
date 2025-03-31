@@ -32,7 +32,6 @@ const setup = () => {
     updateAmount();
     amountOfCards.addEventListener("click", updateAmount);
     amountOfCards.addEventListener("input", updateAmount);
-    updateHighscore();
 };
 
 const updateAmount = () => {
@@ -95,6 +94,14 @@ const play = () => {
     }
 };
 
+const amountOfCards = () => {
+    let amount = 0;
+    for (let i = 0; i < global.aantalPhotos.length; i++) {
+        amount += Number(global.aantalPhotos[i] * global.AMOUNT_TO_MATCH);
+    }
+    global.TOTAL_AMOUNT = amount;
+};
+
 const createListCardPaths = () => {
     const List = [];
     for (let i = 0; i < global.AMOUNT_TO_MATCH; i++) {
@@ -148,9 +155,7 @@ const update = () => {
         document.getElementById("triesH").innerText = global.tries;
         let match = Array.from(turned).every(img => img.getAttribute("Data-other") === turned[0].getAttribute("Data-other"));
         if (match) {
-            Array.from(turned).forEach(card => {
-                card.classList.add("match");
-            });
+            Array.from(turned).forEach(card => card.classList.add("match"));
             setTimeout(() => {
                 Array.from(turned).forEach(card => {
                     card.classList.remove("turned", "match");
@@ -161,9 +166,7 @@ const update = () => {
                 checkEnd();
             }, 1000);
         } else {
-            Array.from(turned).forEach(card => {
-                card.classList.add("mismatch");
-            });
+            Array.from(turned).forEach(card => card.classList.add("mismatch"));
             setTimeout(() => {
                 turnBack();
                 isBusy = false;
@@ -171,23 +174,6 @@ const update = () => {
             }, 1000);
         }
     }
-};
-
-const checkEnd = () => {
-    const found = document.getElementsByClassName("found");
-    if (found.length === global.TOTAL_AMOUNT) {
-        stopTimer();
-        updateHighscore();
-        endGame();
-    }
-};
-
-const amountOfCards = () => {
-    let amount = 0;
-    for (let i = 0; i < global.aantalPhotos.length; i++) {
-        amount += Number(global.aantalPhotos[i] * global.AMOUNT_TO_MATCH);
-    }
-    global.TOTAL_AMOUNT = amount;
 };
 
 const turnBack = () => {
@@ -198,8 +184,12 @@ const turnBack = () => {
     });
 };
 
-const clearNullsList = (list) => {
-    return list.filter(item => item !== null && item !== "");
+const checkEnd = () => {
+    const found = document.getElementsByClassName("found");
+    if (found.length === global.TOTAL_AMOUNT) {
+        stopTimer();
+        endGame();
+    }
 };
 
 const endGame = () => {
@@ -218,7 +208,10 @@ const restart = () => {
     document.getElementById("Beginning").classList.remove("hidden");
     document.getElementById("PlayField").innerHTML = "";
     document.getElementById("timer").innerText = "0";
-    updateHighscore(); // ✅ herlaadt de bestTime op het scherm
+};
+
+const clearNullsList = (list) => {
+    return list.filter(item => item !== null && item !== "");
 };
 
 const algorithm = (cards, field) => {
@@ -249,6 +242,7 @@ const algorithm = (cards, field) => {
     }
 };
 
+// Timer functies
 const startTimer = () => {
     elapsedTime = 0;
     document.getElementById("timer").innerText = elapsedTime;
@@ -260,15 +254,6 @@ const startTimer = () => {
 
 const stopTimer = () => {
     clearInterval(timerInterval);
-};
-
-const updateHighscore = () => {
-    const prev = localStorage.getItem("bestTime");
-    if (!prev || elapsedTime < parseInt(prev)) {
-        localStorage.setItem("bestTime", elapsedTime);
-    }
-    const best = localStorage.getItem("bestTime");
-    document.getElementById("highscore").innerText = best ?? "--";
 };
 
 window.addEventListener("load", setup);

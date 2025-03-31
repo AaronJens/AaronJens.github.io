@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+    <meta charset="UTF-8">
     <title>Matching Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
+
 <div id="Beginning">
     <header>
         <h1>Matching Game</h1>
     </header>
+
     <label for="amountOfCards">Aantal gelijke kaarten:
         <input type="number" min="2" value="2" id="amountOfCards">
     </label>
+
     <label>
         <input type="button" value="Speel Spel" id="startBtn">
     </label>
+
     <h2>Onderwerpen:</h2>
     <div id="SubjectsPictures"></div>
 </div>
@@ -28,7 +32,9 @@
             Tijd: <span id="timer">0</span>s
         </h3>
     </header>
+
     <div id="PlayField"></div>
+
     <label>
         <input type="button" value="Restart" class="restart">
     </label>
@@ -44,7 +50,10 @@
     </label>
 </div>
 
+
+
+<footer>Aaron Van Daele</footer>
+
 <script src="scripts/code.js"></script>
-<footer>Aaron van Daele</footer>
 </body>
 </html>
