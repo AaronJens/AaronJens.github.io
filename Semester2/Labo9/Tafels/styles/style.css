@@ -1,0 +1,40 @@
+body {
+    width: 960px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+#txtGetal {
+    margin-left: 10px;
+    width: 100px;
+}
+
+#btnGo {
+    margin-left: 10px;
+}
+
+.tafel {
+    display: inline-block;
+    width: 300px;
+    border: 1px solid #000;
+    margin: 10px;
+}
+
+.tafel-header {
+    background-color: #002b45;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.tafel-row {
+    padding: 8px;
+}
+
+.tafel-row:nth-child(even) {
+    background-color: lightgrey;
+}
