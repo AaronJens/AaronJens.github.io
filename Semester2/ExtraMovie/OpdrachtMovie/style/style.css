@@ -1,0 +1,159 @@
+﻿body, html {
+	height: 100%;
+	margin: 0;
+	padding: 10px;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content {
+	margin: 0 auto;
+	display: grid;
+	grid-template-areas: "likebar header" "likebar movielist";
+	grid-template-columns: 300px auto;
+}
+
+#header {
+	grid-area: header;
+}
+#movielist {
+	grid-area: movielist;
+}
+#likebar {
+	grid-area: likebar;
+	display: none;
+	padding-right: 20px;
+}
+
+.fas {
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+}
+
+#counters {
+	margin: 10px 0;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.counter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 12px;
+	border: 2px solid;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 16px;
+	gap: 6px;
+	min-width: 50px;
+}
+
+#likecounter {
+	border-color: green;
+	color: green;
+}
+
+#dislikecounter {
+	border-color: red;
+	color: red;
+}
+
+.counter i {
+	font-size: 16px;
+}
+
+.movie {
+	display: grid;
+	grid-template-areas:
+		"title title"
+		"image description"
+		"buttons buttons";
+	grid-template-columns: auto 1fr;
+	gap: 10px;
+	padding: 15px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.title {
+	grid-area: title;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+.image {
+	grid-area: image;
+}
+.image img {
+	width: 150px;
+	border-radius: 5px;
+}
+
+.description {
+	grid-area: description;
+	margin: 0;
+	padding: 0 10px;
+}
+
+.buttons {
+	grid-area: buttons;
+	margin-top: 10px;
+}
+
+.likebutton, .dislikebutton {
+	font-size: 1.2em;
+	margin-right: 8px;
+	background-color: #eee;
+	border: none;
+	padding: 6px 10px;
+	border-radius: 6px;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.likebutton i,
+.dislikebutton i {
+	margin: 0;
+}
+
+.likebutton.active {
+	background-color: green;
+	color: white;
+}
+
+.dislikebutton.active {
+	background-color: red;
+	color: white;
+}
+
+/* Sidebar: liked movies */
+#likebar h2 {
+	font-size: 18px;
+	font-weight: bold;
+}
+#likebarmovies {
+	list-style: none;
+	padding: 0;
+	margin-top: 10px;
+}
+#likebarmovies li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+}
+#likebarmovies i {
+	color: #888;
+	cursor: pointer;
+	transition: color 0.2s;
+}
+#likebarmovies i:hover {
+	color: red;
+}
